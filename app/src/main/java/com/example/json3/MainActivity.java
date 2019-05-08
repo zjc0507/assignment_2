@@ -55,8 +55,11 @@ public class MainActivity extends AppCompatActivity {
                                     {
                                         JSONObject station  = data.getJSONObject(index);
 
-                                        JSONObject properties = station.getJSONObject("geometry");
-                                        localities.append(properties.getString("coordinates")+"\n");
+                                        JSONObject geometry = station.getJSONObject("geometry");
+                                        JSONObject properties = station.getJSONObject("properties");
+
+                                        localities.append(properties.getString("STOPNAME")+"\n");
+                                        localities.append(geometry.getString("coordinates")+"\n");
                                     }
 
                                     System.err.println(response);
