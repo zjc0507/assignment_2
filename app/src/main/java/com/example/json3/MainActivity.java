@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //train station in auckland
                 String url ="http://data-atgis.opendata.arcgis.com/datasets/c82756c875ff4e9fad0bc7a9f97ef7a8_0.geojson";
 
                 JsonObjectRequest jsObjRequest = new JsonObjectRequest
